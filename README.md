@@ -18,7 +18,7 @@ Rafael Magalhães , o projeto foi um workshop rapido utilizando o template de [C
 ![](https://github.com/brenokf/brenomelo/blob/master/github/POrtifolio.gif?raw=true)
 
 ## Linguagens 
-- Html 5
+- HTML5
 - CSS3
 - BootsTrap 4.3
 
