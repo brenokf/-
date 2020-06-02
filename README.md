@@ -1,9 +1,9 @@
 ### Features
 
--  Atualização de Skils 
+- Atualização de Skils 
 - Atualização de Projetos Realizados
 - Layout Mais dinamico 
--
+
 
 # Meu Portifólio 
 
