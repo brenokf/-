@@ -1,302 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Curriculo - Breno Melo</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oráculo da Lua | Experiência Premium de Leitura</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="css/app.css" rel="stylesheet" />
 </head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main class="container py-5">
+    <section class="hero glass mb-4 text-center">
+      <p class="eyebrow mb-2">Experiência de leitura espiritual</p>
+      <h1 class="mb-3">Oráculo da Lua</h1>
+      <p class="lead mb-3">Uma aplicação elegante para leitura de <strong>Tarô</strong>, <strong>Baralho Cigano</strong> e <strong>Cartas Místicas</strong>.</p>
+      <div class="chips" id="deck-badges" aria-label="Oráculos disponíveis"></div>
+    </section>
 
-<body id="page-top">
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Breno Melo </span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpeg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          
-          <a class="nav-link js-scroll-trigger" href="#about">About <i class="fas fa-robot"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience <i class="fas fa-laptop-code"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education <i class="fas fa-user-graduate"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills <i class="fas fa-code"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests ">Interests <i class="fas fa-rocket"></i> </i></a> 
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards <i class="fas fa-medal"></i></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="container-fluid p-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
-       
-        <h1 class="mb-0">Breno
-          
-          <span class="text-primary">Melo 👨‍💻</span>
-          
-           
-        </h1>
-        <p role="image" aria-label="rocket">🚀  👨‍💻  💻  🎧  🎮 🤖</p> 
-        <div class="subheading mb-5"> Rua Contarelli N 73 QD 165,Nova Cidade, Manaus · +55 92 99400 4598·
-          <a href="mailto:breno_melo_mendes@hotmail.com">breno_melo_mendes@hotmail.com</a>
+    <section class="glass p-4 mb-4">
+      <form id="reading-form" class="row g-3" novalidate>
+        <div class="col-lg-4">
+          <label for="deck" class="form-label">Oráculo</label>
+          <select class="form-select" id="deck" required>
+            <option value="tarot">Tarô</option>
+            <option value="cigano">Baralho Cigano</option>
+            <option value="cartas">Cartas Místicas</option>
+          </select>
         </div>
-        <p class="lead mb-5">An passionate fullstack developer experiencied in personal projects, student at Rocketseat Bootcamp and at UNICESUMAR studying Analysis and Systems Development. I try to apply the best code practices as a designer partner and I'm always learning about new technologies and coding.</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/breno-melo-769ab898/">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/brenokf">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://twitter.com/BrenoMeloMendes">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.facebook.com/BrenoMeloMendes">
-            <i class="fab fa-facebook-f"></i>
-          </a>
+
+        <div class="col-lg-4">
+          <label for="spread" class="form-label">Tiragem</label>
+          <select class="form-select" id="spread" required>
+            <option value="1">Carta única · Conselho direto</option>
+            <option value="3">3 cartas · Passado, Presente e Futuro</option>
+          </select>
         </div>
+
+        <div class="col-lg-4">
+          <label for="theme" class="form-label">Tema da leitura</label>
+          <select class="form-select" id="theme" required>
+            <option value="amor">Amor</option>
+            <option value="carreira">Carreira</option>
+            <option value="espiritualidade">Espiritualidade</option>
+            <option value="geral">Geral</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label for="question" class="form-label">Sua intenção (opcional)</label>
+          <input id="question" type="text" class="form-control" maxlength="140" placeholder="Ex: O que preciso entender neste momento?" />
+        </div>
+
+        <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
+          <button type="submit" class="btn btn-oracle">Revelar leitura ✨</button>
+          <button type="button" class="btn btn-outline-light" id="shuffle-btn">Nova energia 🔮</button>
+          <small class="text-soft">Dica: respire fundo e foque na sua pergunta antes de revelar.</small>
+        </div>
+      </form>
+    </section>
+
+    <section id="result" class="d-none" aria-live="polite">
+      <div class="glass p-4 mb-4">
+        <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+          <div>
+            <h2 class="h3 mb-1" id="result-title"></h2>
+            <p class="text-soft mb-0" id="result-subtitle"></p>
+          </div>
+          <span class="badge rounded-pill text-bg-warning" id="reading-date"></span>
+        </div>
+
+        <div class="row g-3" id="cards"></div>
+      </div>
+
+      <div class="glass p-4">
+        <h3 class="h5 mb-2">Síntese da leitura</h3>
+        <p class="mb-0" id="summary"></p>
       </div>
     </section>
 
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Be-The-Hero</h3>
-            <div class="subheading mb-3">Back-End - Front-End - Mobile </div>
-            <p>Be-The-Hero is a project developed to connect people and companies with nonprofit organizations (NPOs). It has an interface created to register NPOs and their cases and a simple mobile app used to connect people and companies who would like to help these nonprofit organizations.
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">March 2020 </span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Brainstorm</h3>
-            <div class="subheading mb-3">Back-End - Front-End - Mobile</div>
-            <p>This simple project uses a plataform to show people that is possible to invest in startup ideias. In the app users can access the projects and choose which one they want o invest in..</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">March 2020</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">GoBarber</h3>
-            <div class="subheading mb-3">Back-End - Front-End - Mobile</div>
-            <p>GoBarber is an application that connects barbers to their customers, with intelligent scheduling organizes the hours of the barbers according to the service requirements of the users, at the time the Back-End is being developed and tested using the Node Js language, but the project consists of the version of iteface Web, Reac Js that will also be developed, in addition to the mobile version that developed with React Native, the choices of these languages are due to their speed of response...</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">April -2020</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Ecomerce</h3>
-            <div class="subheading mb-3">Mobile</div>
-            <p>Currently under development, Ecomerce is a personal project app that will be used to shopping clothes and accessories.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">December-2019</span>
-          </div>
-        </div>
-
-      </div>
-
+    <section class="history mt-4" id="history-section" hidden>
+      <h3 class="h5 mb-3">Última leitura salva</h3>
+      <div class="glass p-3" id="history-content"></div>
     </section>
+  </main>
 
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-      <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">RocketSeat</h3>
-            <div class="subheading mb-3">BootCamp GoStack</div>
-            <div>Intensive course about nodejs, react and react native + TypeScript + Software Architecture.</div>
-            <p>Duration: 6 weeks</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">March-2020 - May 2020</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">University Center of Maringá</h3>
-            <div class="subheading mb-3">Analysis and systems development</div>
-            <div>The Systems Analysis and Development course aims to train technologists capable of analyzing, designing, documenting, specifying, testing, deploying and maintaining computer information systems, acting in a professional manner.</div>
-            <p>Duration: 2.6 years </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">February 2020 - July 2023</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-      <div class="w-100">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-css3-alt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-js-square"></i>
-          </li>
-        
-          <li class="list-inline-item">
-            <i class="fab fa-react"></i>
-          </li>
-
-          <li class="list-inline-item">
-            <i class="fab fa-react"></i>
-          </li>
-
-          <li class="list-inline-item">
-            <i class="fab fa-node-js"></i>
-          </li>
-          
-          <li class="list-inline-item">
-            <i class="fab fa-npm"></i>
-          </li>
-
-          <li class="list-inline-item">
-            <i class="fab fa-yarn"></i>
-          </li>
-
-          <li class="list-inline-item">
-            <i class="fab fa-git"></i>
-          </li>
-
-          <li class="list-inline-item">
-            <i class="fab fa-docker"></i>
-          </li>
-
-
-        </ul>
-
-        <div class="subheading mb-3">Workflow</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Back-end of the application at first with tests on insomnia</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Responsive application front-end and back-end integration</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Functional mobile integrated with the Back-End</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Commit to the code modifications github</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Share project progress on Linkedin</li>
-        </ul>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
-      <div class="w-100">
-        <h2 class="mb-5">Interests</h2>
-        <p>Besides being a fullstack developer, I like most of the time programming at home lol. I always like it when I can eat pizza with friends or family, and when I'm not programming I also like to play GTA-5.</p>
-        <p class="mb-0">When forced to go home, I follow several sci-fi, fantasy and children's films, I love to sing and often sing at church and events, I love my church, and when I'm at home, I'm always researching developing my soft skils, creating network and updating me on youtube content and documentation.</p>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
-      <div class="w-100">
-        <h2 class="mb-5">Awards &amp; Certifications</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            RocketSeat omnistack of the week participation certificate</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            2<sup>st</sup>
-            Place in the best android app at the CETELI-SAMSUNG worshop</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Proficiency certification in progress in English intermediate level</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Certified for volunteering at the Rio 2016 Olympics</li>
-          
-        </ul>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
-
+  <script src="js/app.js"></script>
 </body>
-
 </html>
