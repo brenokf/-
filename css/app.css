@@ -1,0 +1,197 @@
+:root {
+  --bg-deep: #0f0a24;
+  --bg-mid: #1b1240;
+  --bg-accent: #2f1f64;
+  --text-main: #f5efff;
+  --text-soft: #c9bcf0;
+  --gold: #f7c86a;
+  --violet: #a684ff;
+  --pink: #ff8bc7;
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(1200px 600px at 15% -10%, #472593 0%, transparent 50%),
+              radial-gradient(900px 500px at 85% 0%, #5e2ca0 0%, transparent 50%),
+              linear-gradient(180deg, var(--bg-accent), var(--bg-mid) 35%, var(--bg-deep));
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 40px 70px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(2px 2px at 130px 80px, #fff, transparent);
+  background-size: 160px 120px;
+  animation: drift 35s linear infinite;
+}
+
+@keyframes drift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120px); }
+}
+
+.hero h1,
+h2,
+h3,
+.eyebrow,
+.form-label {
+  font-family: 'Cinzel', serif;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  letter-spacing: 0.04em;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+}
+
+.lead {
+  color: #e7dcff;
+}
+
+.glass {
+  position: relative;
+  border: 1px solid var(--glass-border);
+  border-radius: 1.1rem;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 36px rgba(3, 2, 10, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.chip {
+  border: 1px solid rgba(247, 200, 106, 0.4);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  color: #ffe8af;
+  background: rgba(247, 200, 106, 0.1);
+  font-size: 0.84rem;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: #f4eaff;
+}
+
+.form-control,
+.form-select {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text-main);
+  border: 1px solid rgba(174, 147, 255, 0.5);
+  border-radius: 0.7rem;
+}
+
+.form-control::placeholder {
+  color: #b8aadd;
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--pink);
+  box-shadow: 0 0 0 0.24rem rgba(255, 139, 199, 0.2);
+}
+
+.form-select option {
+  color: #220f4c;
+}
+
+.btn-oracle {
+  border: none;
+  border-radius: 999px;
+  color: #1f0e45;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.65rem 1.2rem;
+  background: linear-gradient(135deg, var(--gold), #ffdca1 45%, var(--pink));
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.btn-oracle:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 10px 22px rgba(255, 139, 199, 0.25);
+}
+
+.btn-outline-light {
+  border-radius: 999px;
+}
+
+.text-soft {
+  color: var(--text-soft);
+}
+
+.oracle-card {
+  height: 100%;
+  perspective: 1000px;
+}
+
+.oracle-card-inner {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.9rem;
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+  padding: 1rem;
+  min-height: 220px;
+  transform: rotateY(90deg);
+  opacity: 0;
+  animation: reveal 0.7s ease forwards;
+}
+
+.oracle-card small {
+  color: #ffd47f;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.oracle-card h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.oracle-card p {
+  color: #efe5ff;
+  margin-bottom: 0;
+  line-height: 1.45;
+}
+
+@keyframes reveal {
+  0% { transform: rotateY(90deg) translateY(8px); opacity: 0; }
+  100% { transform: rotateY(0deg) translateY(0); opacity: 1; }
+}
+
+.history .glass {
+  border-style: dashed;
+}
+
+@media (max-width: 768px) {
+  .btn-oracle,
+  .btn-outline-light {
+    width: 100%;
+  }
+}
